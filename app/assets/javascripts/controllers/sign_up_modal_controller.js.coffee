@@ -1,6 +1,6 @@
 App.SignUpModalController = Ember.Controller.extend
 
-  needs: ["application"]
+  needs: ["application", "flashMessage"]
 
   isSignInChosen: true
   isSignUpChosen: false
@@ -28,6 +28,7 @@ App.SignUpModalController = Ember.Controller.extend
             email: @get("email")
             password: @get("password")
       .then (data) =>
+        @get('controllers.flashMessage').notice("Thank you for signing up. Please wait for administrative approval of your account.")
         @send "closeModal"
       .fail (e) =>
         @set "shouldHideError", false

@@ -6,4 +6,5 @@
 #= require ./resource_files_controller.js.coffee
 #= require ./resource_file_controller.js.coffee
 #= require ./announcements_controller.js.coffee
+#= require ./flash_message_controller.js.coffee
 

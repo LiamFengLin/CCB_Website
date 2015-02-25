@@ -15,6 +15,8 @@
             a{action 'userClick' '#work-page'} WORK
           li.nav-text.nav-text-container.fr
             a{action 'userClick' '#contact-page'} CONTACT 
+    .flash-message-container.flash-message-text
+      = flashMessage.message
     #open-menu{action 'toggleDropDownMenu'}
       .open-menu-bar
       .open-menu-bar

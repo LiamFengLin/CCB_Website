@@ -1,6 +1,14 @@
 App.ApplicationController = Ember.Controller.extend Ember.Evented,
 
+  needs: ["flashMessage"]
+
   shouldHideDropDownMenu: true
+
+  init: ->
+    flashMessage = @store.createRecord "flashMessage",
+      type: "notice"
+      message: ""
+    @set "flashMessage", flashMessage
 
   actions:
 

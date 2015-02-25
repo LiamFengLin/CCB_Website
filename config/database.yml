@@ -19,7 +19,12 @@ default: &default
 
 development:
   <<: *default
-  database: Ccb_development
+  # database: Ccb_development
+  host: mysql
+  database: ccb
+  username: ccb
+  password: 96PfRiDj7wWDoCiFstP2 # <%= ENV['CCB_DATABASE_PASSWORD'] %>
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -49,6 +54,8 @@ test:
 #
 production:
   <<: *default
-  database: Ccb_production
-  username: Ccb
-  password: <%= ENV['CCB_DATABASE_PASSWORD'] %>
+  adapter: mysql2
+  host: mysql
+  database: ccb
+  username: ccb
+  password: 96PfRiDj7wWDoCiFstP2 # <%= ENV['CCB_DATABASE_PASSWORD'] %>

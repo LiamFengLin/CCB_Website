@@ -122,8 +122,8 @@
     .fl.columns.large-4
       .team-member
         .member-name.h6
-          | 
+          | a
         .member-position
-          | 
+          | a
         .member-email
-          | 
+          | a

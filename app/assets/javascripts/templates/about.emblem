@@ -1,0 +1,129 @@
+#about-page.page
+  .row
+    #about-title-container
+      #subpage-header
+        .box-heading
+          | WHO ARE WE
+        #about-subtitle
+          | ABOUT US
+        #underline
+  .row
+    #about-text-container.columns
+      p "Consulting Club at Berkeley was founded on the philosophy that consulting as a career should be accessible to all interested students. It provides the stepping stones for those who want to learn about and enter the consulting profession. At the heart of its existence is the spirit of providing equal opportunities to all those who are willing to learn."
+
+      p <span style="padding-left:650px">- Chloe, CCB Founder, Accenture</span>           
+  	  
+      p As an education-oriented student group, we focus on providing opportunities for students to succeed as competitive candidates for entry-level consulting jobs. We organize mock case interview practices with peers, organize extensive training and workshops, and the best chances to meet the industry professionals at all level. Our graduates have excelled at firms including Accenture, McKinsey, Bain & Co., Deloitte, PwC, Simon-Kucher, Citi, and Goldman Sachs.  
+  	
+      p CCB is proud to partner with Accenture and PwC. 
+  	
+      p CCB is a Haas Business School and ASUC sponsored club. CCB is the sponsor club for DeCal course UGBA 98/198 "Introduction to Consulting". 
+  .row
+    .fl.columns.large-4
+      .team-member
+        .member-name.h6
+          | Jiayu Qin
+        .member-position
+          | President
+        .member-email
+          | jiayu@berkeley.edu
+        .exec-headshot-container
+          img#exec-headshot src="/assets/exec_team_headshot1.jpg"
+          .overlay
+            .overlay-text 
+              | My name is Jiayu Qin. I am a fourth year Economics major.
+        .hr.large-2
+    .fl.columns.large-4
+      .team-member
+        .member-name.h6
+          | Katherine Hsu
+        .member-position
+          | Advisor
+        .member-email
+          | katherinehsu@berkeley.edu
+        = link-to "index"
+          .exec-headshot-container
+            img#linkedin-icon src="/assets/linkedin_circular_icon.png"
+        .hr.large-2   
+    .fl.columns.large-4
+      .team-member
+        .member-name.h6
+          | Vahe Nokhoudian
+        .member-position
+          | Internal VP
+        .member-email
+          | vnokhoud@berkeley.edu
+        = link-to "index"
+          .exec-headshot-container
+            img#linkedin-icon src="/assets/linkedin_circular_icon.png"
+        .hr.large-2
+  .row
+    .large-4.columns.fl
+      .team-member
+        .member-name.h6
+          | William Tang
+        .member-position
+          | External VP
+        .member-email
+          | william-t@berkeley.edu
+        = link-to "index"
+          .exec-headshot-container
+            img#linkedin-icon src="/assets/linkedin_circular_icon.png"
+        .hr.large-2
+    .fl.columns.large-4
+      .team-member
+        .member-name.h6
+          | Sasha Hu
+        .member-position
+          | VP of Marketing
+        .member-email
+          | sashawu@berkeley.edu
+        = link-to "index"
+          .exec-headshot-container
+            img#linkedin-icon src="/assets/linkedin_circular_icon.png"
+        .hr.large-2
+    .fl.columns.large-4
+      .team-member
+        .member-name.h6
+          | Nelson Xu
+        .member-position
+          | VP of Finance
+        .member-email
+          | nelson.xu@berkeley.edu
+        = link-to "index"
+          .exec-headshot-container
+            img#linkedin-icon src="/assets/linkedin_circular_icon.png"
+        .hr.large-2
+  .row
+    .large-4.columns.fl
+      .team-member
+        .member-name.h6
+          | Sharon Yang
+        .member-position
+          | VP of Communication
+        .member-email
+          | xcyang@berkeley.edu
+        = link-to "index"
+          .exec-headshot-container
+            img#linkedin-icon src="/assets/linkedin_circular_icon.png"
+        .hr.large-2
+    .fl.columns.large-4
+      .team-member
+        .member-name.h6
+          | Erica Zhu
+        .member-position
+          | VP of Internal Development
+        .member-email
+          | dongjiezhu@berkeley.edu
+        = link-to "index"
+          .exec-headshot-container
+            img#linkedin-icon src="/assets/linkedin_circular_icon.png"
+        .hr.large-2
+    .fl.columns.large-4
+      .team-member
+        .member-name.h6
+          | 
+        .member-position
+          | 
+        .member-email
+          | 

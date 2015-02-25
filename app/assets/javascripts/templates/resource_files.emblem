@@ -1,0 +1,8 @@
+#resource
+  .row
+    .columns.large-4.fl
+      each resourceFile in controller
+        .resource-file-name.normal-button-view{action "renderFile" resourceFile} class={resourceFile.isSelected:selected-button-view} 
+          = resourceFile.fileName
+    .columns.large-8.pdf-container.fl class={filesNotSelected:hidden}
+      view App.PDFView src=renderedPDFUrl

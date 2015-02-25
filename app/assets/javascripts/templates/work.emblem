@@ -1,0 +1,32 @@
+#work-page.pad-large.page
+  .row
+    #work-title-container.pad-bottom
+      #subpage-header
+        .box-heading
+          | WHAT WE DO
+        #work-subtitle
+          | OUR SERVICES
+        #underline
+  .row
+    #work-text-container.columns
+      p Join CCB Monday general meeting for more details. Below are samples of the cases we discuss.
+
+  .row
+    .large-4.columns.work-container
+      .service.text-center.hover-effect
+        h5 Sales and Marketing Strategy
+        .hr.large-3
+        p We focus primarily on new product development, market and customer segmentation, and promotion and advertising.
+        p Examples of our work in this area include customer segmentation and demographic analysis for a large foreign spice maker, as well as a new product feature for a leading American luxury brand.
+    .large-4.columns.work-container
+      .service.text-center.hover-effect
+        h5 Organizational Strategy
+        .hr.large-3 
+        p Our work here includes organizational structure, change management, and restructuring and re-engineering analysis.
+        p Examples of our work in this area include working with a large Brazilian media conglomerate on the organizational structure for a new branch of their business, including new roles and systems.      
+    .large-4.columns.work-container
+      .service.text-center.hover-effect
+        h5 Business Unit Strategy
+        .hr.large-3
+        p Lastly, our work in the club here includes customer and competitor strategy, cost management, operational improvement, growth recommendations, and a market overview.
+        p Examples of our work in this area include developing competitor and customer profiles, as well as analysis of best positioning for a leading high tech company. 

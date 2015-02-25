@@ -1,0 +1,9 @@
+#announcements
+  each announcement in controller
+    .announcement-container
+      .announcement-name
+        = announcement.name
+      .announcement-time
+        = announcement.humanizedTime
+      .announcement-description
+        = announcement.description

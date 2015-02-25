@@ -1,0 +1,30 @@
+#contact-page
+  iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3149.5038086571512!2d-122.25854!3d37.871898999999985!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1413246000525" frameborder="0"
+  #map-toggle{action "toggle"}
+    .btn
+      | TOGGLE MAP
+  .contact-holder{bind-attr class="is-toggled"}
+    .row
+      #contact-title-container.pad-bottom
+        #subpage-header
+          .box-heading
+            | GET IN TOUCH
+          #contact-subtitle
+            | CONTACT US
+          #underline
+    .row
+      .large-5.columns.fl
+        #contact-text-container.columns
+          p If you are a student interested in joining Consulting Club at Berkeley, please stay tuned for updates regarding our fall recruiting cycle.
+
+          p If you are a company interested in partnering with Consulting Club at Berkeley please contact consulting.berkeley@gmail.com.
+
+          p To be added to our general mailing list for recruiting events with companies, workshops and more please fill out the form on the right.
+
+          #contact-details.ul
+            .li
+              | consulting.berkeley@gmail.com 
+      .large-5.columns.fr
+        #contact-form-container
+          iframe src="https://docs.google.com/forms/d/1FTKAQ5_zsd1i77rqBUO-svcimj-THmTt9Hd_NljC6D0/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0"
+            | Loading...

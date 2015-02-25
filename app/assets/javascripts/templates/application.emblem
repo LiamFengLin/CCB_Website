@@ -1,0 +1,46 @@
+#container
+  #nav
+    #nav-container.row
+      .large-4.columns.fl
+        ul.navigation
+          li.nav-text.nav-text-container.fl
+            a{action 'userClick' '#about-page'} href="#" ABOUT
+          li.nav-text.nav-text-container.fl
+            a{action 'userClick' '#join-page'} href="#" JOIN US
+      .large-4.columns.fl.text-center
+        img#logo src="/assets/logo.jpg"
+      .large-4.columns.fl
+        ul.navigation
+          li.nav-text.nav-text-container.fr
+            a{action 'userClick' '#work-page'} WORK
+          li.nav-text.nav-text-container.fr
+            a{action 'userClick' '#contact-page'} CONTACT 
+    #open-menu{action 'toggleDropDownMenu'}
+      .open-menu-bar
+      .open-menu-bar
+      .open-menu-bar
+    ul.drop-down-menu class={shouldHideDropDownMenu:hidden}
+      li.drop-down-text-container
+        a{action 'openModal' 'sign_up_modal'} Sign Up
+      if currentUser.isSignedIn
+        li.drop-down-text-container
+          a{action 'signOut'} Sign Out
+      else
+        li.drop-down-text-container
+          a{action 'openModal' 'sign_in_modal'} Sign In
+      li.drop-down-text-container
+        a href="#resource_files" Resource
+
+outlet
+#footer-container
+  .row
+    .large-12.columns.text-center
+      #footer
+        .hr.large-1
+      #copy-text
+        #logo-text
+          | Consulting Club at Berkeley
+.modal-overlay click="closeModal"
+.modal
+  .modal-animation
+    outlet 'modal'

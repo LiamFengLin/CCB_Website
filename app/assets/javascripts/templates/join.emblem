@@ -1,0 +1,16 @@
+#join-page.page
+  .row
+    #join-title-container
+      #subpage-header
+        .box-heading
+          | JOIN US
+        #join-subtitle
+          | GET INVOLVED
+        #underline
+  .row
+    #join-text-container.columns
+      p Consulting Club at Berkeley welcomes undergraduate students from diverse backgrouds to get involved in a variety of capacities. 
+
+      p General Meeting time in Fall 2014 semester: 7:00- 8:30PM every Monday biweekly
+
+      p Membership fee: $15/semester, $25/year

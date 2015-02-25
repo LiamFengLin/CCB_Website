@@ -1,0 +1,43 @@
+#home
+  #home-slides
+    #info-board-container
+      #info-board
+        #info-text-container
+          #info-text-inner-container
+            | Applications  will be released in the beginning of each semester. See below for further details on Consulting Club at Berkeley events in the current semester.
+            render "announcements"
+    .arrow-left-container{action 'userSetSlide' 1}        
+      .arrow.arrow-left
+    img#slide_show1 src=rotatingImage
+    .arrow-right-container{action 'userSetSlide' -1}
+      .arrow.arrow-right
+
+partial "about"
+
+#quote-divider.background-visible
+  .row
+    .large-8.large-centered.columns
+      #quote-text.h2
+        | CONSULTING CLUB <br> 
+        | &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+        | AT BEREKELEY
+
+partial "join"
+partial "work"
+
+#sponsor-section.background-visible
+  .row
+    .large-12.columns.text-center
+      h3 Sponsors & Collaborators
+      .hr.large-2
+  .row
+    .large-3.columns.text-center.sponsor-image
+      img#sponsor_logo1 src="/assets/accenture_logo.png"
+    .large-3.columns.text-center.sponsor-image
+      img#sponsor_logo2 src="/assets/PwC_logo.png"
+    .large-3.columns.text-center.sponsor-image
+      img#sponsor_logo3 src="/assets/EY_logo.png"
+    .large-3.columns.text-center.sponsor-image
+      img#sponsor_logo4 src="/assets/OnPrem_logo.png"
+
+partial "contact"

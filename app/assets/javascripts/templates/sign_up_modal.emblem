@@ -1,0 +1,27 @@
+modal-dialog action="close" modalClass="auth-modal-dialog sign-in-modal-dialog"
+  .modal
+    .sign-in-modal
+      .modal-header
+        ul
+          li.modal-sub-header.fl class={isSignInChosen:alternative-button-view}
+            a{action openModal "sign_in_modal"} href="#" Sign In
+          li.modal-sub-header.fl class={isSignUpChosen:alternative-button-view}
+            a{action openModal "sign_up_modal"} href="#" Sign Up
+      .modal-error-box.modal-error class={shouldHideError:hidden}
+        =errorMessage
+      .modal-content
+        form submit="signUp"
+          .field-wrapper.email-text
+            | Email address
+          .field-wrapper.email
+            = input class="field email" value=email
+          .field-wrapper.password-text
+            | Password
+          .field-wrapper.password
+            = input type="password" class="field password" value=password
+          .field-wrapper.checkbox 
+            = input type="checkbox" id="remember-me" class="field remember-checkbox fl" checked=remember
+            label.fl for="remember-me" Remember me
+          = input type="submit" value="Sign Up" class="submit flat-btn lightblue"
+      .modal-footer
+        | *After sign-up, please wait for approval from an administrator

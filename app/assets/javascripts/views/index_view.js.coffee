@@ -1,4 +1,4 @@
-class App.IndexView extends Ember.View
+App.IndexView = Ember.View.extend
 
   photoTransitionEffectEvent: (->
     @controller.on 'photoTransitionEffect', -> 

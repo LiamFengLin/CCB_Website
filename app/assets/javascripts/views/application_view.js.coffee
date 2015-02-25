@@ -1,4 +1,4 @@
-class App.ApplicationView extends Ember.View
+App.ApplicationView = Ember.View.extend
 
   viewShouldScrollToSectionFirst: (->
     @controller.on 'viewShouldScrollToSection', (dest) -> 

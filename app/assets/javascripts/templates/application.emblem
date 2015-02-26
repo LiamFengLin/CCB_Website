@@ -24,14 +24,14 @@
     ul.drop-down-menu class={shouldHideDropDownMenu:hidden}
       li.drop-down-text-container
         a{action 'openModal' 'sign_up_modal'} Sign Up
-      if currentUser.isSignedIn
+      if auth.signedIn
         li.drop-down-text-container
           a{action 'signOut'} Sign Out
       else
         li.drop-down-text-container
           a{action 'openModal' 'sign_in_modal'} Sign In
       li.drop-down-text-container
-        a href="#resource_files" Resource
+        a href="#/resource_files" Resource
 
 outlet
 #footer-container

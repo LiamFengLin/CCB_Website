@@ -13,6 +13,7 @@
 #= require ember-auth-module-rememberable
 
 #= require_self
+#= require auth
 #= require app
 
 # for more details see: http://emberjs.com/guides/application/

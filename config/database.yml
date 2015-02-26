@@ -19,11 +19,11 @@ default: &default
 
 development:
   <<: *default
-  database: Ccb_development
-  # host: mysql
-  # database: ccb
-  # username: ccb
-  # password: 96PfRiDj7wWDoCiFstP2 # <%= ENV['CCB_DATABASE_PASSWORD'] %>
+  # database: Ccb_development
+  host: mysql
+  database: ccb
+  username: ccb
+  password: <%= ENV['CCB_DATABASE_PASSWORD'] %>
 
 
 # Warning: The database defined as "test" will be erased and
@@ -54,9 +54,9 @@ test:
 #
 production:
   <<: *default
-  databse: Ccb_production
-  # adapter: mysql2
-  # host: mysql
-  # database: ccb
-  # username: ccb
-  # password: 96PfRiDj7wWDoCiFstP2 # <%= ENV['CCB_DATABASE_PASSWORD'] %>
+  # databse: Ccb_production
+  adapter: mysql2
+  host: mysql
+  database: ccb
+  username: ccb
+  password: <%= ENV['CCB_DATABASE_PASSWORD'] %>

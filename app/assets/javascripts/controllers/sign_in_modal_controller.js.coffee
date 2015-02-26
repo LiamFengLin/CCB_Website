@@ -27,8 +27,7 @@ App.SignInModalController = Ember.Controller.extend
           remember: @get("remember")
     ).then (data) =>
       @send "closeModal"
-    .fail (e) =>
-      @set "controllers.application.signedIn", false
+    .catch (e) =>
       @set "shouldHideError", false
       json = e.responseJSON
       

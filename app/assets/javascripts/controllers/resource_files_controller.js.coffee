@@ -15,3 +15,5 @@ App.ResourceFilesController = Ember.ArrayController.extend
   actions:
     renderFile: (resourceFile) ->
       @set "selectedFileName", resourceFile.get('fileName')
+
+# App.ResourceFilesSerializer = DS.ActiveModelSerializer.extend

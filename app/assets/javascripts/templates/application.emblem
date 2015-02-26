@@ -31,7 +31,7 @@
         li.drop-down-text-container
           a{action 'openModal' 'sign_in_modal'} Sign In
       li.drop-down-text-container
-        a href="#resource_files" Resource
+        a href="#/resource_files" Resource
 
 outlet
 #footer-container

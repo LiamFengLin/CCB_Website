@@ -10,7 +10,10 @@ Ccb::Application.routes.draw do
     delete 'sign_out' => 'sessions#destroy'
   end
   
-  resources :resource_files, param: :file_name, :constraints => { :file_name => /.+\..+/ }, only: [:index, :show]
+  resources :resource_files, param: :file_name, :constraints => { :file_name => /.+\..+/ }, only: [:index, :show] do
+    get "fetch_thumbnail" => "resource_files#fetch_thumbnail"
+  end
+  
   get "admin/batch_update" => "resource_files#batch_update"
 
   resources :announcements, only: [:index, :create]

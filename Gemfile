@@ -23,6 +23,7 @@ gem "active_model_serializers", "~> 0.8.1"
 gem 'mysql2'
 
 gem 'dropbox-sdk'
+gem 'rmagick'
 
 gem 'paperclip'
 

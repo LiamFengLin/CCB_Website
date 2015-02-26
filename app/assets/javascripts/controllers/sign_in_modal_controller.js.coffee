@@ -1,6 +1,6 @@
 App.SignInModalController = Ember.Controller.extend
 
-  needs: ["application"]
+  needs: ["application", 'flashMessage']
 
   isSignInChosen: false
   isSignUpChosen: true
@@ -21,16 +21,15 @@ App.SignInModalController = Ember.Controller.extend
   signInUser: ->
     @auth.signIn(
       data: 
-        user:
-          email: @get("email")
-          password: @get("password")
-          remember: @get("remember")
+        email: @get("email")
+        password: @get("password")
+        remember: @get("remember")
     ).then (data) =>
+      @get('controllers.flashMessage').notice('You have successfully signed in.')
       @send "closeModal"
     .catch (e) =>
       @set "shouldHideError", false
       json = e.responseJSON
-      
       if json?.message?
         @set "errorMessage", json.message
       else if json?.full_messages?

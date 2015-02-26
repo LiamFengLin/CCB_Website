@@ -162,8 +162,8 @@ GEM
     ember-auth-strategy-token-source (1.0.2)
       ember-auth-source (~> 9.0)
       ember-source (~> 1.0)
-    ember-data-source (1.0.0.beta.7)
-      ember-source
+    ember-data-source (1.0.0.beta.15)
+      ember-source (~> 1.8)
     ember-rails (0.16.4)
       active_model_serializers
       barber (>= 0.6.0)
@@ -327,7 +327,6 @@ DEPENDENCIES
   ember-auth-response-json-rails (~> 1.0)
   ember-auth-session-cookie-rails (~> 1.0)
   ember-auth-strategy-token-rails (~> 1.0)
-  ember-data-source (= 1.0.0.beta.7)
   ember-rails
   ember-source (~> 1.8.1)
   emblem-rails (~> 0.2.1)

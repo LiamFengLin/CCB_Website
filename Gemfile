@@ -36,8 +36,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-gem 'ember-data-source', '1.0.0.beta.7'
-
 gem 'ember-auth-rails', '~> 5.0' # client-side authentication
 gem 'ember-auth-request-jquery-rails', '~> 1.0' # auth requests via jQuery.ajax
 gem 'ember-auth-response-json-rails', '~> 1.0' # responses in json

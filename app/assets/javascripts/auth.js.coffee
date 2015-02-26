@@ -9,8 +9,8 @@ App.Auth = Ember.Auth.extend
     'rememberable'
   ]
 
-  signInEndPoint: '/users/sign_in'
-  signOutEndPoint: '/users/sign_out'
+  signInEndPoint: '/sign_in'
+  signOutEndPoint: '/sign_out'
   tokenKey: 'auth_token'
   tokenIdKey: 'user_id'
   tokenLocation: 'param'

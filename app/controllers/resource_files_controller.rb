@@ -3,8 +3,6 @@ class ResourceFilesController < ApplicationController
   @@dropbox_prefix = '/CCB/Case Books/'
   @@filesys_prefix = '/downloads/'
 
-  before_action :authenticate_user!
-
   def index
     resource_files = ResourceFile.all
     render json: {resource_files: ActiveModel::ArraySerializer.new(resource_files, each_serializer: ResourceFileSerializer).as_json }

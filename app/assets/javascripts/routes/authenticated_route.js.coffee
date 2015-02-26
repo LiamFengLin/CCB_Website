@@ -1,12 +1,11 @@
-App.AuthenticatedRoute = Ember.Route.extend
+App.AuthenticatedRoute = App.ApplicationRoute.extend
 
   needs: ["application"]
 
   beforeModel: ->
-    if !this.controllerFor("currentUser").get("isSignedIn")
+    if not @get("auth.signedIn")
       @redirectToLogin()
-
+      
   redirectToLogin: ->
     @transitionTo("index")
-    controller = @controllerFor("application")
-    controller.send "openModal", "sign_in_modal"
+    @openModalNonAction("sign_in_modal")

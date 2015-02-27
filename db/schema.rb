@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150226082342) do
+ActiveRecord::Schema.define(version: 20150227004008) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -47,11 +47,12 @@ ActiveRecord::Schema.define(version: 20150226082342) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "announcements", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.decimal  "time",                    precision: 10
-    t.string   "description", limit: 255
+    t.string   "name",              limit: 255
+    t.decimal  "time",                          precision: 10
+    t.string   "description",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "time_string_input", limit: 255
   end
 
   create_table "resource_files", force: :cascade do |t|
@@ -66,6 +67,8 @@ ActiveRecord::Schema.define(version: 20150226082342) do
     t.string   "thumbnail_content_type", limit: 255
     t.integer  "thumbnail_file_size",    limit: 4
     t.datetime "thumbnail_updated_at"
+    t.string   "file_url",               limit: 255
+    t.string   "file_thumbnail_url",     limit: 255
   end
 
   create_table "users", force: :cascade do |t|

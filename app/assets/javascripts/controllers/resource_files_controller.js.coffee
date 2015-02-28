@@ -4,17 +4,21 @@ App.ResourceFilesController = Ember.ArrayController.extend
 
   selectedFileName: null
 
-  filesNotSelected: true
+  filesNotSelected: false
 
   displayableEntries: Ember.A([])
 
   displayableEntryIndices: [] 
 
+  fileAddressBase: "/resource_files/"
+
   renderedPDFUrl: (->
     if @get("selectedFileName")
       @set "filesNotSelected", false  
-      return "http://localhost:3000/resource_files/" + @get("selectedFileName")
-  ).property("selectedFileName")
+      return @get('fileAddressBase') + @get("selectedFileName")
+    defaultResourceFileName = this.get('content.content')[0].get('fileName')
+    return @get('fileAddressBase') + defaultResourceFileName
+  ).property("selectedFileName", "content")
 
   intialSetSlide: (->
     @setSlide(0)

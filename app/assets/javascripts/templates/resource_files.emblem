@@ -8,9 +8,10 @@
           .resource-image-container
             img#thumbnail-image src=resourceFile.fileThumbnailUrl
           .resource-card-container
-            .resource-name-container.resource-file-name.normal-button-view{action "renderFile" resourceFile} class={resourceFile.isSelected:selected-button-view} 
+            .resource-name-container.resource-file-name{action "renderFile" resourceFile} class={resourceFile.isSelected:selected-button-view} 
               = resourceFile.fileName
   .arrow-right-container{action 'userSetSlide' 1}
     .arrow.arrow-right      
-.columns.large-8.pdf-container.fl class={filesNotSelected:hidden}
-  view App.PDFView src=renderedPDFUrl
+.row#pdf-viewer
+  .columns.large-12.pdf-container class={filesNotSelected:hidden}
+    view App.PDFView src=renderedPDFUrl

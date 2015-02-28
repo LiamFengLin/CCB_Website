@@ -12,6 +12,8 @@ App.ResourceFilesController = Ember.ArrayController.extend
 
   fileAddressBase: "/resource_files/"
 
+  # if resourceFile.isDisplayable
+
   renderedPDFUrl: (->
     if @get("selectedFileName")
       @set "filesNotSelected", false  
@@ -23,6 +25,29 @@ App.ResourceFilesController = Ember.ArrayController.extend
   intialSetSlide: (->
     @setSlide(0)
   ).observes("content")
+
+  stepNumber: 0
+
+  stepNext: ->
+    numResouceFiles = @get('content.length')
+    if @get('stepNumber') < numResouceFiles
+      nextStep = @get('stepNumber') + 1
+      @set "stepNumber", nextStep
+      Ember.run.scheduleOnce "afterRender", =>  
+        towards = "-#{nextStep * 25}%"
+        $('.resource-list-container').animate {left: towards}, 
+          duration: 600
+          easing: 'swing'
+
+  stepPrevious: ->
+    if @get('stepNumber') > 0
+      previousStep = @get('stepNumber') - 1
+      @set "stepNumber", previousStep
+      Ember.run.scheduleOnce 'afterRender', =>
+        towards = "-#{previousStep * 25}%"
+        $('.resource-list-container').animate {left: towards},
+          duration: 600
+          easing: 'swing'    
 
   setSlide: (offset) ->
     content = @get("content")
@@ -46,3 +71,19 @@ App.ResourceFilesController = Ember.ArrayController.extend
 
     userSetSlide: (offset) ->
       @setSlide(offset)
+
+    goToStepPrevious: ->
+      @stepPrevious()
+
+    goToStepNext: ->
+      @stepNext()
+
+    seeMoreToggle: ->
+      if @get("shouldSeeMore")
+        $('.resource-list-container').css('width', '1000%')
+        @set("shouldSeeMore", false)
+        @set("shouldHideButton", false)
+      else
+        $('.resource-list-container').css('width', '100%')
+        @set("shouldSeeMore", true)
+        @set("shouldHideButton", true)

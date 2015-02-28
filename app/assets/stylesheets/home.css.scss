@@ -1,4 +1,6 @@
 @import "compass/css3";
+@import "custom_variables";
+@import "custom_mixins";
 
 body {
 	font-family: 'Lato',"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -608,14 +610,7 @@ p {
 }
 
 .box-heading {
-	border: 1px solid #222;
-	font-family: 'Petrona';
-	font-size: 14px;
-	padding: 10px;
-	margin-bottom: 22px;
-	text-align: center;
-	position: relative;
-	display: inline-block;
+	@include box-heading;
 }
 
 #about-subtitle {

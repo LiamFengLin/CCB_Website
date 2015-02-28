@@ -1,0 +1,19 @@
+@import "compass/css3";
+@import "custom_variables";
+
+@mixin box-heading {
+  border: 1px solid #222;
+  font-family: 'Petrona';
+  font-size: 14px;
+  padding: 10px;
+  margin-bottom: 22px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+@mixin see-more-button {
+  color: $see-more-button-blue;
+  font-size: 13px;
+  cursor: pointer;
+}

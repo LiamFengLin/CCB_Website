@@ -1,0 +1,30 @@
+@import "compass/css3";
+@import "custom_variables";
+
+.no-text-decoration {
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.no-list-style {
+  list-style: none;
+}
+
+.position-vertical-center {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+.position-horizontal-center {
+  position: relative;
+  left: 50%;
+  @include transform(translateX(-50%));
+}
+
+.position-center {
+  @extend .position-vertical-center;
+  @extend .position-horizontal-center;
+}

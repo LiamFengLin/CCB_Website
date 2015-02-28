@@ -1,0 +1,70 @@
+@import "compass/css3";
+@import "custom_variables";
+
+#resource-list {
+
+    margin-top: 90px;
+    max-width: 50em;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    .resource-image-container {
+      width: 100%;
+      img {
+        width: 100%
+      }
+    }
+
+    .resource-card-container {
+      min-height: 95px;
+    }
+
+    .resource-name-container {
+      padding: 20px;
+      background-color: $eatery-greyish-white;
+    }
+
+    .resource-inner-container {
+      width: 80%;
+      box-shadow: rgba(0,0,0,0.05) 0 1px 3px 0;
+      border-top: 1px solid #eee;
+      border-left: 1px solid #eaeaea;
+      border-right: 1px solid #eaeaea;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .resource-container {
+      width: 33.3%;
+      margin: 15px 0;
+    }
+
+    .arrow {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+      @include transform(rotate(225deg) translateY(-50%));
+    }
+    .arrow-left {
+      @include transition(all 1s ease);
+      border-top: 5px solid #d2d6d5;
+      border-right: 5px solid #d2d6d5; 
+      left: 4%;
+    }
+    .arrow-right {
+      @include transition(all 1s ease);
+      border-bottom: 5px solid #d2d6d5;
+      border-left: 5px solid #d2d6d5; 
+      right: 3%;
+    }
+    .arrow-left:hover {
+      border-top: 5px solid black;
+      border-right: 5px solid black; 
+    }
+    .arrow-right:hover {
+      border-bottom: 5px solid black;
+      border-left: 5px solid black; 
+    }
+  }

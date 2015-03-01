@@ -1,6 +1,6 @@
 .row
   .resource-list-intro
-    | PDF Gallery
+    | Resource Gallery
   .more-resource-toggle{action "seeMoreToggle"}
     if shouldSeeMore
       | See less    
@@ -21,6 +21,13 @@
                 = resourceFile.fileName
   .arrow-right-container{action 'goToStepNext'} class={shouldHideButton:hidden}
     .arrow.arrow-right      
-.row#pdf-viewer
-  .columns.large-12.pdf-container class={filesNotSelected:hidden}
-    view App.PDFView src=renderedPDFUrl
+
+.row
+  .multimedia-facade
+    .multimedia-container
+      .fl#pdf-viewer
+        .columns.large-12.pdf-container class={filesNotSelected:hidden}
+          view App.PDFView src=renderedPDFUrl
+      .fl#audio-player
+        .audio-section
+          <audio class="audio-control" src="" preload="auto" controls></audio>

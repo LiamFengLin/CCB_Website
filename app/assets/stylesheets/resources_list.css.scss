@@ -106,10 +106,28 @@
   }
 }
 
-#pdf-viewer {
-  .pdf-container {
-    iframe {
-      width: 100%;
+.multimedia-facade {
+  position: relative;
+  width: 100%;
+}
+
+.multimedia-container {
+  position: relative;
+  width: 200%;
+  overflow: hidden;
+  #pdf-viewer {
+    width: 50%;
+    .pdf-container {
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+
+  #audio-player {
+    width: 50%;
+    .audio-section {
+      margin-top: 50px;
     }
   }
 }

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150227004008) do
+ActiveRecord::Schema.define(version: 20150228225859) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -69,6 +69,8 @@ ActiveRecord::Schema.define(version: 20150227004008) do
     t.datetime "thumbnail_updated_at"
     t.string   "file_url",               limit: 255
     t.string   "file_thumbnail_url",     limit: 255
+    t.boolean  "has_thumbnail",          limit: 1
+    t.string   "extension",              limit: 255
   end
 
   create_table "users", force: :cascade do |t|

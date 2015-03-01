@@ -13,20 +13,50 @@ App.ResourceFilesController = Ember.ArrayController.extend
   fileAddressBase: "/resource_files/"
 
   # if resourceFile.isDisplayable
+  getExt: (fileName) ->
+    fileName.split('.').slice(-1)[0]
 
   renderedPDFUrl: (->
-    if @get("selectedFileName")
-      @set "filesNotSelected", false  
-      return @get('fileAddressBase') + @get("selectedFileName")
+    fileName = @get("selectedFileName")
+    if fileName
+      ext = @getExt(fileName)
+      if ext == "pdf"
+        @toPDFViewer()
+        @set "filesNotSelected", false  
+        return @get('fileAddressBase') + @get("selectedFileName")
     defaultResourceFileName = this.get('content.content')[0].get('fileName')
     return @get('fileAddressBase') + defaultResourceFileName
   ).property("selectedFileName", "content")
+
+  renderedAudioUrl: (->
+    fileName = @get("selectedFileName")
+    if fileName
+      ext = @getExt(fileName)
+      if ext == "mp3"
+        @toAudio()
+        @set "filesNotSelected", false  
+        $(".audio-control").attr("src", @get('fileAddressBase') + @get("selectedFileName"))
+        return @get('fileAddressBase') + @get("selectedFileName")
+    return ""
+  ).observes("selectedFileName", "content")
 
   intialSetSlide: (->
     @setSlide(0)
   ).observes("content")
 
   stepNumber: 0
+
+  toAudio: ->
+    Ember.run.scheduleOnce "afterRender", =>  
+      $('.multimedia-container').animate {left: "-100%"}, 
+        duration: 600
+        easing: 'swing'
+
+  toPDFViewer: ->
+    Ember.run.scheduleOnce "afterRender", =>  
+      $('.multimedia-container').animate {left: "0%"}, 
+        duration: 600
+        easing: 'swing'    
 
   stepNext: ->
     numResouceFiles = @get('content.length')
@@ -48,6 +78,13 @@ App.ResourceFilesController = Ember.ArrayController.extend
         $('.resource-list-container').animate {left: towards},
           duration: 600
           easing: 'swing'    
+
+  setToLastStep: ->
+    lastStep = "-#{@get('stepNumber') * 25}%"
+    $('.resource-list-container').css('left', lastStep)    
+
+  setToFront: ->
+    $('.resource-list-container').css('left', "0%")    
 
   setSlide: (offset) ->
     content = @get("content")
@@ -83,7 +120,9 @@ App.ResourceFilesController = Ember.ArrayController.extend
         $('.resource-list-container').css('width', '1000%')
         @set("shouldSeeMore", false)
         @set("shouldHideButton", false)
+        @setToLastStep()
       else
         $('.resource-list-container').css('width', '100%')
         @set("shouldSeeMore", true)
         @set("shouldHideButton", true)
+        @setToFront()
